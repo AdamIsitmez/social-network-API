@@ -1,10 +1,10 @@
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
 module.exports = {
   // Get all Users
   async getUsers(req, res) {
     try {
-      const users = await user.find();
+      const users = await User.find().populate('thoughts').populate('friends');
       res.json(users);
     } catch (err) {
       res.status(500).json(err);
@@ -44,8 +44,11 @@ module.exports = {
         return res.status(404).json({ message: 'No user with that ID' });
       }
 
-      res.json({ message: 'User deleted!' });
+      await Thought.deleteMany({ username: { $in: [user.username] } });
+
+      res.json({ message: `${user.username} and their thoughts deleted!` });
     } catch (err) {
+      console.log(err)
       res.status(500).json(err);
     }
   },
@@ -73,7 +76,7 @@ module.exports = {
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId },
-        { $push: { friend: req.params.friendId } },
+        { $addToSet: { friends: req.params.friendId } },
         { runValidators: true, new: true }
       );
 
@@ -84,15 +87,14 @@ module.exports = {
       res.json(user)
     } catch (err) {
       res.status(500).json(err);
-
     }
   },
 
   async deleteFriend(req, res) {
     try {
       const user = await User.findOneAndUpdate(
-        { _id: req.param.userId },
-        { $pull: { friend: req.params.friendId } },
+        { _id: req.params.userId },
+        { $pull: { friends: req.params.friendId } },
         { runValidators: true, new: true }
       );
 

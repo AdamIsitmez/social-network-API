@@ -1,0 +1,22 @@
+[
+    {
+        "username": "john_doe",
+        "email": "john_doe@example.com"
+    },
+    {
+        "username": "emma_smith",
+        "email": "emma_smith@example.com"
+    },
+    {
+        "username": "alex_wong",
+        "email": "alex_wong@example.com"
+    },
+    {
+        "username": "laura_garcia",
+        "email": "laura_garcia@example.com"
+    },
+    {
+        "username": "mike_jackson",
+        "email": "mike_jackson@example.com"
+    }
+]

@@ -1,0 +1,60 @@
+[
+    {
+        "thoughtText": "This is a thought about cats.",
+        "username": "john_doe",
+        "reactions": [
+            {
+                "reactionBody": "I love cats too!",
+                "username": "emma_smith"
+            },
+            {
+                "reactionBody": "Cats are amazing companions.",
+                "username": "alex_wong"
+            }
+        ]
+    },
+    {
+        "thoughtText": "Just had a great cup of coffee!",
+        "username": "emma_smith",
+        "reactions": [
+            {
+                "reactionBody": "Coffee is my favorite!",
+                "username": "john_doe"
+            },
+            {
+                "reactionBody": "Coffee is the best way to start the day.",
+                "username": "laura_garcia"
+            }
+        ]
+    },
+    {
+        "thoughtText": "I'm excited about my new project.",
+        "username": "alex_wong",
+        "reactions": [
+            {
+                "reactionBody": "That's awesome! Good luck!",
+                "username": "john_doe"
+            }
+        ]
+    },
+    {
+        "thoughtText": "Feeling grateful for the sunshine today.",
+        "username": "laura_garcia",
+        "reactions": [
+            {
+                "reactionBody": "Sunshine always lifts my mood!",
+                "username": "mike_jackson"
+            }
+        ]
+    },
+    {
+        "thoughtText": "Just finished a great workout session.",
+        "username": "mike_jackson",
+        "reactions": [
+            {
+                "reactionBody": "Exercise is so important for physical and mental health.",
+                "username": "john_doe"
+            }
+        ]
+    }
+]
